@@ -4,7 +4,7 @@ import argparse
 
 DEBUG = False
 
-def discoverAll(data):
+def structuredSearch(data):
 	match = []
 	targets = []
 	[ match.append(x) for x in re.finditer(r'\"host\":\"(\w+|[\.\-])+\".\"ip\":\"(\d+|\.)+\"', data, re.IGNORECASE) ]
@@ -23,7 +23,7 @@ def filteringAllData(data):
 def main():
 	for i in range(1,len(sys.argv)):
 		file_data = open(sys.argv[i], "rb").read()
-		target_list = discoverAll(file_data.decode(errors='ignore'))
+		target_list = structuredSearch(file_data.decode(errors='ignore'))
 		if target_list != []:
 			filtered_data = filteringAllData(target_list)
 			print('[+] Structured data discovered in {0} file'.format(sys.argv[i]))
