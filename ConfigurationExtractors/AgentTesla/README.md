@@ -1,1 +1,2 @@
-
+- [agent_tesla_decryptor_v4.py](https://github.com/Viuleeenz/Reversing_Notes/blob/main/ConfigurationExtractors/AgentTesla/agent_tesla_decryptor_v4.py)
+    - Through script you should be able to extract all samples of AgentTesla config that were **encrypted with enc routine v4.**
