@@ -36,7 +36,6 @@ def add_comment(address, text):
         idc.set_cmt(address, text, 0)
         set_hexrays_comment(address, text)
     except:
-        print("[!] Impossible to set a comment")
         return
 
 def retrive_string(offset):
